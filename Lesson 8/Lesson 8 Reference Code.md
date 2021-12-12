@@ -144,17 +144,58 @@ count = len(d)
 print("the total items in this dictionary is:", count)
 
 
-# Famous Scientists
 
-# ******************
-# * first approach *
-# ******************
+# *************************************
+# * Famous Scientists (Code Skeleton) *
+# *************************************
+# Code Skeleton
 votes = ["Newton", "Einstein", "Gauss", "Darwin", "Gauss", "Euler", 
          "Pythagoras", "Newton", "Euler", "Darwin", "Einstein",
          "Edison", "Gauss", "Euler", "Newton", "Darwin", "Einstein",
          "Einstein", "Edison", "Einstein", "Gauss", "Galileo", "Einstein",
          "Gauss", "Galileo", "Newton", "Gauss"]
 
+# Part 1
+scientists = {}
+
+# check the name one by one in the votes
+for name in votes:
+  pass
+
+# print out the survey result
+print("the survey result:", scientists)
+
+
+# Part 2
+max_count = 0
+for count in scientists.values():
+  pass
+
+print("max count is:", max_count)
+
+
+# Part 3
+# create a empty list to store the most famous scientists (might be more than 1)
+mfs = []
+
+for name in scientists:
+  pass
+
+print("most famous scientists are:", mfs)
+
+
+
+# *************************************
+# * Famous Scientists (Full Solution) *
+# *************************************
+# Version 3 (full solution)
+votes = ["Newton", "Einstein", "Gauss", "Darwin", "Gauss", "Euler", 
+         "Pythagoras", "Newton", "Euler", "Darwin", "Einstein",
+         "Edison", "Gauss", "Euler", "Newton", "Darwin", "Einstein",
+         "Einstein", "Edison", "Einstein", "Gauss", "Galileo", "Einstein",
+         "Gauss", "Galileo", "Newton", "Gauss"]
+
+# Part 1
 # create a empty dictionary
 scientists = {}
 
@@ -168,6 +209,7 @@ for name in votes:
 # print out the survey result
 print("the survey result:", scientists)
 
+# Part 2
 max_count = 0
 for count in scientists.values():
   if count > max_count:
@@ -175,6 +217,7 @@ for count in scientists.values():
 
 print("max count is:", max_count)
 
+# Part 3
 # create a empty list to store the most famous scientists (might be more than 1)
 mfs = []
 
@@ -183,7 +226,5 @@ for name in scientists:
     mfs.append(name)
 
 print("most famous scientists are:", mfs)
-
-
 
 ```
