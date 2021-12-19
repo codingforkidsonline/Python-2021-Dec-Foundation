@@ -57,8 +57,8 @@ def print_gameover_message():
   print("* * * * * * * * * * * * * * * * * * * * * * *")
   print("*                GAME OVER!                 *")
   print("* * * * * * * * * * * * * * * * * * * * * * *")
-  
-  
+
+
 # 1. your game title
 print("* * * * * * * * * * * * * * * * * * * * * * *")
 print("*                                           *")
@@ -92,7 +92,7 @@ print("map rows: {0}, map columns: {1}".format(map_row_count, map_col_count))
 current_row = randint(0, map_row_count-1)  
 current_col = randint(0, map_col_count-1)  
 # for testing purpose only, comment out below print when playing the game
-print("Player's initial position:", current_row, current_col) 
+# print("Player's initial position:", current_row, current_col) 
 
 # 2.4 create a list to store the letters has been discovered by the player so far
 letter_list = []
@@ -125,43 +125,43 @@ while True:
   if response == "left" or response == "l":
     if current_col == 0:      
       result = hit_wall()
-      if(result == "GAMEOVER"):
+      if result == "GAMEOVER":
         break;
     else:      
       current_col -= 1
       result = discover_letter()
-      if(result == "WIN" or result == "LOSE"):
+      if result == "WIN" or result == "LOSE":
         # you might want to let the user to go to next level if they have won the current level
         break;
   elif response == "right" or response == "r":
     if current_col == map_col_count-1:      
       result = hit_wall()
-      if(result == "GAMEOVER"):
+      if result == "GAMEOVER":
         break;
     else:
       current_col += 1
       result = discover_letter()
-      if(result == "WIN" or result == "LOSE"):
+      if result == "WIN" or result == "LOSE":
         break;
   elif response == "up" or response == "u":
     if current_row == 0:      
       result = hit_wall()
-      if(result == "GAMEOVER"):
+      if result == "GAMEOVER":
         break;
     else:
       current_row -= 1
       result = discover_letter()
-      if(result == "WIN" or result == "LOSE"):
+      if result == "WIN" or result == "LOSE":
         break;
   elif response == "down" or response == "d":
     if current_row == map_row_count-1:      
       result = hit_wall()
-      if(result == "GAMEOVER"):
+      if result == "GAMEOVER":
         break;
     else:
       current_row += 1
       result = discover_letter()
-      if(result == "WIN" or result == "LOSE"):
+      if result == "WIN" or result == "LOSE":
         break;
   elif response == "quit" or response == "exit":
     print("\nThanks for playing this game, bye-bye!")
